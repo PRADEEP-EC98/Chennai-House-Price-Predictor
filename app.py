@@ -27,7 +27,6 @@ def load_model():
 
 try:
     model = load_model()
-    st.sidebar.success("Model loaded successfully!")
 except Exception as e:
     st.error(f"Error loading model: {e}")
     st.info("Ensure `house_price_model.pkl` is saved in the project root directory.")
