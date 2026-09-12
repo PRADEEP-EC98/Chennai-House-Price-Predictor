@@ -13,7 +13,7 @@ st.set_page_config(
 
 # Header Section
 st.title("🏠 Chennai House Price Prediction")
-st.markdown("Use this interactive tool to estimate house prices in Chennai based on property attributes.")
+st.markdown("Estimate Chennai house prices with our interactive tool, tailored to your preferences.")
 st.divider()
 
 
