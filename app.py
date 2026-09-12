@@ -77,41 +77,43 @@ with col_results:
     predict_btn = st.button("Predict Price", type="primary", use_container_width=True)
 
     if predict_btn:
-        # Construct single-row DataFrame with identical schema to training features
-        input_data = pd.DataFrame({
-            "area": [area],
-            "bhk": [bhk],
-            "bathroom": [bathroom],
-            "age": [age],
-            "status": [status],
-            "location": [location],
-            "builder": [builder]
-        })
+        with st.spinner("Calculating market value..."):
+            try:
+                # Construct DataFrame matching model schema
+                input_data = pd.DataFrame({
+                    "area": [area],
+                    "bhk": [bhk],
+                    "bathroom": [bathroom],
+                    "age": [age],
+                    "status": [status],
+                    "location": [location],
+                    "builder": [builder]
+                })
 
-        try:
-            prediction = model.predict(input_data)
-            price_lakh = prediction[0]
+                # Run prediction
+                prediction = model.predict(input_data)
 
-            st.markdown("### Predicted Market Value")
+                # Print raw prediction to terminal/logs for debugging
+                print(f"Raw prediction: {prediction}")
 
-            # Formatted Output Display
-            if price_lakh < 1:
-                formatted_price = f"₹{price_lakh * 100000:,.0f}"
-            elif price_lakh < 100:
-                formatted_price = f"₹{price_lakh:,.2f} Lakh"
-            elif price_lakh < 100000:
-                formatted_price = f"₹{price_lakh / 100:,.2f} Crore"
-            else:
-                formatted_price = f"₹{price_lakh / 100000:,.2f} Thousand Crore"
+                price_lakh = prediction[0]
 
-            st.metric(label="Estimated Price", value=formatted_price)
+                # Format price output
+                if price_lakh < 1:
+                    formatted_price = f"₹{price_lakh * 100000:,.0f}"
+                elif price_lakh < 100:
+                    formatted_price = f"₹{price_lakh:,.2f} Lakh"
+                elif price_lakh < 100000:
+                    formatted_price = f"₹{price_lakh / 100:,.2f} Crore"
+                else:
+                    formatted_price = f"₹{price_lakh / 100000:,.2f} Thousand Crore"
 
-            # Property Summary Breakdown
-            with st.expander("Input Summary"):
-                st.json(input_data.to_dict(orient="records")[0])
+                # Render output directly in UI
+                st.success(f"**Estimated Price:** {formatted_price}")
+                st.metric(label="Predicted Value", value=formatted_price)
 
-        except Exception as err:
-            st.error(f"Inference error: {err}")
-
+            except Exception as err:
+                st.error(f"Prediction failed: {err}")
+                st.exception(err)  # Prints full traceback on screen
 # How to Run Locally in PyCharm Terminal:
 # streamlit run app.py
