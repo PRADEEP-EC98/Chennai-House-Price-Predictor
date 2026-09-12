@@ -110,7 +110,7 @@ with col_results:
 
                 # Render output directly in UI
                 #st.success(f"**Success:**")
-                st.metric(label="Predicted Value", value=formatted_price)
+                st.metric(label="Estimated Price", value=formatted_price)
 
             except Exception as err:
                 st.error(f"Prediction failed: {err}")
