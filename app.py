@@ -109,7 +109,7 @@ with col_results:
                     formatted_price = f"₹{price_lakh / 100000:,.2f} Thousand Crore"
 
                 # Render output directly in UI
-                st.success(f"**Estimated Price:** {formatted_price}")
+                st.success(f"**Success:**")
                 st.metric(label="Predicted Value", value=formatted_price)
 
             except Exception as err:
