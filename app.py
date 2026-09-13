@@ -21,7 +21,7 @@ st.divider()
 @st.cache_resource
 def load_model():
     base_dir = os.path.dirname(os.path.abspath(__file__))
-    model_path = os.path.join(base_dir, "house_price_model.pkl")
+    model_path = os.path.join(base_dir, "house_price_linearmodel1.pkl")
     return joblib.load(model_path)
 
 
