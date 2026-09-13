@@ -69,7 +69,7 @@ with col_inputs:
         status = st.selectbox("Construction Status", options=["ready", "under_construction"])
         if status == "under_construction":
             age = 0
-            st.info("Property Age is automatically set to 0 for Under Construction status.")
+            #st.info("Property Age is automatically set to 0 for Under Construction status.")
         else:
             age = st.number_input("Property Age (Years)", min_value=0, max_value=100, value=5, step=1)
         builder = st.selectbox("Builder Name", options=builders_list, index=0)
