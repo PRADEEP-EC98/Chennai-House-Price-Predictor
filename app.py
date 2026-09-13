@@ -67,9 +67,11 @@ with col_inputs:
 
     with c2:
         status = st.selectbox("Construction Status", options=["ready", "under_construction"])
+        if status == "under_construction":
+            age = 0
         location = st.selectbox("Location", options=locations_list, index=0)
         builder = st.selectbox("Builder Name", options=builders_list, index=0)
-    if status == "under_construction": age = 0
+
 with col_results:
     st.subheader("Estimation")
     st.write("Click below to run model inference.")
