@@ -69,7 +69,7 @@ with col_inputs:
         status = st.selectbox("Construction Status", options=["ready", "under_construction"])
         location = st.selectbox("Location", options=locations_list, index=0)
         builder = st.selectbox("Builder Name", options=builders_list, index=0)
-
+    if status == "under_construction": age = 0
 with col_results:
     st.subheader("Estimation")
     st.write("Click below to run model inference.")
@@ -109,8 +109,8 @@ with col_results:
                     formatted_price = f"₹{price_lakh / 100000:,.2f} Thousand Crore"
 
                 # Render output directly in UI
-                #st.success(f"**Success:**")
-                st.metric(label="Estimated Price", value=formatted_price)
+                st.success(f"**Estimated Price:** {formatted_price}")
+                #st.metric(label="Predicted Value", value=formatted_price)
 
             except Exception as err:
                 st.error(f"Prediction failed: {err}")
