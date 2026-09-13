@@ -63,12 +63,15 @@ with col_inputs:
         area = st.number_input("Built-up Area (sq. ft.)", min_value=300, max_value=10000, value=1200, step=50)
         bhk = st.selectbox("BHK (Bedrooms)", options=[1, 2, 3, 4, 5, 6], index=1)
         bathroom = st.selectbox("Bathrooms", options=[1, 2, 3, 4, 5], index=1)
-        age = st.number_input("Property Age (Years)", min_value=0, max_value=100, value=5, step=1)
+
 
     with c2:
         status = st.selectbox("Construction Status", options=["ready", "under_construction"])
         if status == "under_construction":
             age = 0
+            st.info("Property Age is automatically set to 0 for Under Construction status.")
+        else:
+            age = st.number_input("Property Age (Years)", min_value=0, max_value=100, value=5, step=1)
         location = st.selectbox("Location", options=locations_list, index=0)
         builder = st.selectbox("Builder Name", options=builders_list, index=0)
 
