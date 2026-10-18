@@ -115,14 +115,10 @@ with col_results:
 
                     # Run prediction
                     price_lakh = model.predict(input_data)[0]
-                    st.write("Input Data:")
-                    st.dataframe(input_data)
-
-                    st.write("Raw Prediction:", price_lakh)
-
-
-
-                    print(f"[{selected_model_name}] Output: {price_lakh}")
+                    #st.write("Input Data:")
+                    #st.dataframe(input_data)
+                    #st.write("Raw Prediction:", price_lakh)
+                    #print(f"[{selected_model_name}] Output: {price_lakh}")
 
                     # Format price output (assuming price_lakh is in Lakhs)
                     if price_lakh < 1:
