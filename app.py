@@ -36,7 +36,7 @@ def load_selected_model(filename: str):
 
 
 # Option Lists for Dropdowns
-locations_list = sorted([
+locations_list = sorted(["None",
     'Ambattur', 'Ambattur INDUSTRIAL ESTATE', 'Kil Ayanambakkam', 'Kuthambakkam',
     'Mahindra World City', 'Mannivakkam', 'Mogappair', 'Moolakadai', 'Nandambakkam',
     'Oragadam Industrial Corridor', 'Ottiyambakkam', 'Pallavaram', 'Perungalathur',
@@ -44,7 +44,7 @@ locations_list = sorted([
     'Thirumalpur', 'Virugambakkam'
 ])
 
-builders_list = sorted([
+builders_list = sorted(["None",
     'Balaji', 'Casagrand Builder Private Limited', 'Chennai Gated Community',
     'DAC Promoters', 'Dee Star Properties', 'Dhivagaran', 'DJ Properties',
     'Dugar Housing Builders', 'GJ ESTATES', 'Isha Homes', 'Jones foundation private limited',
@@ -64,8 +64,8 @@ with col_inputs:
 
     with c1:
         area = st.number_input("Built-up Area (sq. ft.)", min_value=0, max_value=10000, value=0, step=50)
-        bhk = st.selectbox("BHK (Bedrooms)", options=[1, 2, 3, 4, 5, 6], index=0)
-        bathroom = st.selectbox("Bathrooms", options=[1, 2, 3, 4, 5], index=0)
+        bhk = st.selectbox("BHK (Bedrooms)", options=[0,1, 2, 3, 4, 5, 6], index=0)
+        bathroom = st.selectbox("Bathrooms", options=[0,1, 2, 3, 4, 5], index=0)
         location = st.selectbox("Location", options=locations_list, index=0)
 
     with c2:
