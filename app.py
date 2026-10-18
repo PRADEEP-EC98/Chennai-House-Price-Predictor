@@ -114,10 +114,11 @@ with col_results:
                     })
 
                     # Run prediction
-                    raw_pred = model.predict(input_data)[0]
+                    price_lakh = model.predict(input_data)[0]
 
 
-                    print(f"[{selected_model_name}] Output: {price_lakh}")
+
+                    #print(f"[{selected_model_name}] Output: {price_lakh}")
 
                     # Format price output (assuming price_lakh is in Lakhs)
                     if price_lakh < 1:
