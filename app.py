@@ -89,13 +89,6 @@ with col_results:
     model = None
     try:
         model = load_selected_model(selected_filename)
-
-        # DEBUG
-        st.write("Selected Model:", selected_model_name)
-        st.write("Filename:", selected_filename)
-        st.write("Model Type:", type(model))
-        st.write("Path:", os.path.join(BASE_DIR, selected_filename))
-
         st.caption(f"Loaded: `{selected_filename}`")
     except Exception as e:
         st.error(f"Error loading model: {e}")
