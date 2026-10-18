@@ -44,14 +44,14 @@ locations_list = sorted(["None",
     'Thirumalpur', 'Virugambakkam'
 ])
 
-builders_list = sorted(["None",
+builders_list = sorted([
     'Balaji', 'Casagrand Builder Private Limited', 'Chennai Gated Community',
     'DAC Promoters', 'Dee Star Properties', 'Dhivagaran', 'DJ Properties',
     'Dugar Housing Builders', 'GJ ESTATES', 'Isha Homes', 'Jones foundation private limited',
     'MAXWORTH PROPERTIES', 'MP Developers', 'MrPincode', 'Navin Housing Properties P LTD',
     'Radiance Realty Developers India Ltd', 'Traventure Homes Pvt Ltd', 'Urbanrise',
     'Velan Housing Properties', 'Venkatesh'
-])
+]).insert(0,"None")
 
 # Layout Columns
 col_inputs, col_results = st.columns([2, 1], gap="large")
