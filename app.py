@@ -116,12 +116,6 @@ with col_results:
                     # Run prediction
                     raw_pred = model.predict(input_data)[0]
 
-                    # Check if model outputs log-transformed values (e.g., < 20)
-                    # If your model was trained on log1p(price), invert it here
-                    if raw_pred < 20:
-                        price_lakh = np.expm1(raw_pred)
-                    else:
-                        price_lakh = raw_pred
 
                     print(f"[{selected_model_name}] Output: {price_lakh}")
 
