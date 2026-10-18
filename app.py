@@ -27,7 +27,6 @@ MODEL_FILES = {
 
 
 # Dynamic Model Loader
-@st.cache_resource
 def load_selected_model(filename: str):
     model_path = os.path.join(BASE_DIR, filename)
     if not os.path.exists(model_path):
