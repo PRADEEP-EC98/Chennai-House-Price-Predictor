@@ -36,14 +36,14 @@ def load_selected_model(filename: str):
 
 
 # Option Lists for Dropdowns
-locations_list = sorted(["None",
+locations_list = sorted([
     'Ambattur', 'Ambattur INDUSTRIAL ESTATE', 'Kil Ayanambakkam', 'Kuthambakkam',
     'Mahindra World City', 'Mannivakkam', 'Mogappair', 'Moolakadai', 'Nandambakkam',
     'Oragadam Industrial Corridor', 'Ottiyambakkam', 'Pallavaram', 'Perungalathur',
     'Ragavendra Colony', 'Rathinamangalam', 'Selaiyur', 'Sembakkam', 'Thirumazhisai',
     'Thirumalpur', 'Virugambakkam'
 ])
-
+locations_list.insert(0,"None")
 builders_list = sorted([
     'Balaji', 'Casagrand Builder Private Limited', 'Chennai Gated Community',
     'DAC Promoters', 'Dee Star Properties', 'Dhivagaran', 'DJ Properties',
@@ -51,7 +51,8 @@ builders_list = sorted([
     'MAXWORTH PROPERTIES', 'MP Developers', 'MrPincode', 'Navin Housing Properties P LTD',
     'Radiance Realty Developers India Ltd', 'Traventure Homes Pvt Ltd', 'Urbanrise',
     'Velan Housing Properties', 'Venkatesh'
-]).insert(0,"None")
+])
+builders_list.insert(0, "None")
 
 # Layout Columns
 col_inputs, col_results = st.columns([2, 1], gap="large")
