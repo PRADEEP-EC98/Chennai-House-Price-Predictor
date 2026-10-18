@@ -118,7 +118,7 @@ with col_results:
 
 
 
-                    #print(f"[{selected_model_name}] Output: {price_lakh}")
+                    print(f"[{selected_model_name}] Output: {price_lakh}")
 
                     # Format price output (assuming price_lakh is in Lakhs)
                     if price_lakh < 1:
