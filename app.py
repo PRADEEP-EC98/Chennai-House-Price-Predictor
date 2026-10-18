@@ -115,6 +115,10 @@ with col_results:
 
                     # Run prediction
                     price_lakh = model.predict(input_data)[0]
+                    st.write("Input Data:")
+                    st.dataframe(input_data)
+
+                    st.write("Raw Prediction:", price_lakh)
 
 
 
