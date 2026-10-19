@@ -21,8 +21,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # Add all your trained model filenames here
 MODEL_FILES = {
-    "Linear Regression": "house_price_linearmodel1.pkl",
-    'Lasso Regression': 'house_price_Lassomodel.pkl',
+    "Linear Regression": "house_price_linearmodel.pkl"
 }
 
 
