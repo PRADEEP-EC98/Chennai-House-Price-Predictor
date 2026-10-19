@@ -101,7 +101,6 @@ with col_results:
                         "area": [area],
                         "bhk": [bhk],
                         "bathroom": [bathroom],
-                        "age": [age],
                         "status": [status],
                         "location": [location],
                         "builder": [builder]
