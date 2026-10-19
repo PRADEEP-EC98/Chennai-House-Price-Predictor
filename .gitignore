@@ -8,5 +8,8 @@ preprocessed_data_outliers_removed.csv
 # Experimental models
 house_price_Lassomodel.pkl
 
+#Jupyter Notebooks
+LassoRegression.ipynb
+
 # Jupyter checkpoints
 .ipynb_checkpoints/
