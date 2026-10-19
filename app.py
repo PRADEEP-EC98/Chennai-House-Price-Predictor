@@ -21,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # Add all your trained model filenames here
 MODEL_FILES = {
-    "Linear Regression": "house_price_linearmodel.pkl"
+    "Linear Regression": "Models/house_price_linearmodel.pkl"
 }
 
 
@@ -69,11 +69,11 @@ with col_inputs:
 
     with c2:
         status = st.selectbox("Construction Status", options=["None","ready", "under_construction"], index=0)
-        if status == "under_construction":
+        '''if status == "under_construction":
             age = 0
             st.info("Property Age is automatically set to 0 for Under Construction status.")
         else:
-            age = st.number_input("Property Age (Years)", min_value=0, max_value=35, value=0, step=1)
+            age = st.number_input("Property Age (Years)", min_value=0, max_value=35, value=0, step=1)'''
         builder = st.selectbox("Builder Name", options=builders_list, index=0)
 
 with col_results:
