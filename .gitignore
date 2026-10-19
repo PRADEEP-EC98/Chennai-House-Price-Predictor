@@ -7,7 +7,7 @@ preprocessed_data_outliers_removed.csv
 
 # Experimental models
 house_price_Lassomodel.pkl
-
+linear_adjusted_to_outlier_model.pkl
 #Jupyter Notebooks
 LassoRegression.ipynb
 
