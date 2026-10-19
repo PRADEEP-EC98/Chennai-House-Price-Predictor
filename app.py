@@ -22,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 # Add all your trained model filenames here
 MODEL_FILES = {
     "Linear_Regression_with_outliers": "Models/house_price_linearmodel.pkl",
-    'Linear Regression_without_outliers': "Models/house_price_linearmodel.pkl"
+    'Linear Regression_without_outliers': "Models/house_price_linearmodel_adjusted_to_outliers.pkl"
 }
 
 
