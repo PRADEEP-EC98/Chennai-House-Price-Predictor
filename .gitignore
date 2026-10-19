@@ -2,8 +2,8 @@
 .idea/
 
 # Processed datasets
-preprocessed_data_outliers_not_removed.csv
-preprocessed_data_outliers_removed.csv
+#preprocessed_data_outliers_not_removed.csv
+#preprocessed_data_outliers_removed.csv
 
 # Experimental models
 house_price_Lassomodel.pkl
