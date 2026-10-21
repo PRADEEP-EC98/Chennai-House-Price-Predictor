@@ -112,7 +112,7 @@ with col_results:
                         formatted_price = f"₹{price_lakh / 100000:,.2f} Thousand Crore"
 
                     # Render output
-                    st.success(f"**Estimated Price ({selected_model_name}):** {formatted_price}")
+                    st.success(f"**Estimated Price:** {formatted_price}")
 
                 except Exception as err:
                     st.error(f"Prediction failed with {selected_model_name}: {err}")
