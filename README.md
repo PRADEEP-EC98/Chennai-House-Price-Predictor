@@ -32,6 +32,7 @@ Chennai_House_Price_Predictor/
 │
 ├── Models/
 │   └── house_price_linearmodel.pkl
+│   └── house_price_linearmodel_adjusted_to_outliers.pkl
 │
 ├── Notebooks/
 │   ├── EDA.ipynb
