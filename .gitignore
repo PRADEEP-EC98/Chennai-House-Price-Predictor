@@ -10,7 +10,7 @@ house_price_Lassomodel.pkl
 linear_adjusted_to_outlier_model.pkl
 #Jupyter Notebooks
 LassoRegression.ipynb
-eda.ipynb
+#eda.ipynb
 
 # Jupyter checkpoints
 .ipynb_checkpoints/
