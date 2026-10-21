@@ -2,6 +2,8 @@
 
 A Machine Learning-powered Streamlit application that predicts residential property prices in Chennai based on property characteristics such as area, BHK, bathroom count, location, builder, and construction status.
 
+Web App -> https://chennai-house-price-predictor-trx2yw5ooqpudcncnfeyrm.streamlit.app
+
 ---
 
 ## 🚀 Project Overview
